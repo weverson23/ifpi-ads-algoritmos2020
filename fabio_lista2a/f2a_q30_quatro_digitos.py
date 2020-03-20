@@ -18,8 +18,9 @@ def expressao(a):
 def main():
     print('Existem números que obedecem a característica \n2025 -> dividindo: 20 e 25 -> somando temos 45 -> 452 = 2025')
     n = int(input('\nDigite um valor entre 1000 e 9999: '))
-    
-    if expressao(n) == True:
+    if n < 1000 or n > 9999:
+        print('Fora do escopo')
+    elif expressao(n) == True:
         print(f'o valor {n} obedece a característica')
     else:
         print(f'o valor {n} não obedece a característica')
